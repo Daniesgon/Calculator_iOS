@@ -10,6 +10,8 @@
 		AB1803FA2836AD5B00520506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1803F92836AD5B00520506 /* AppDelegate.swift */; };
 		AB1804032836AD5D00520506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB1804022836AD5D00520506 /* Assets.xcassets */; };
 		AB1804062836AD5D00520506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1804042836AD5D00520506 /* LaunchScreen.storyboard */; };
+		ABF4CE28283BF3E000899867 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF4CE26283BF3E000899867 /* HomeViewController.swift */; };
+		ABF4CE29283BF3E000899867 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF4CE27283BF3E000899867 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		AB1804022836AD5D00520506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB1804052836AD5D00520506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB1804072836AD5D00520506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF4CE26283BF3E000899867 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ABF4CE27283BF3E000899867 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +55,12 @@
 			isa = PBXGroup;
 			children = (
 				AB1803F92836AD5B00520506 /* AppDelegate.swift */,
-				AB1804022836AD5D00520506 /* Assets.xcassets */,
-				AB1804042836AD5D00520506 /* LaunchScreen.storyboard */,
+				ABF4CE19283BF10100899867 /* Model */,
+				ABF4CE1A283BF11000899867 /* View */,
+				ABF4CE1B283BF11800899867 /* Controller */,
+				ABF4CE1D283BF15B00899867 /* Util */,
 				AB18040D2836AF7A00520506 /* Supporting Files */,
+				AB1804022836AD5D00520506 /* Assets.xcassets */,
 			);
 			path = "Calculator-iOS";
 			sourceTree = "<group>";
@@ -64,6 +71,61 @@
 				AB1804072836AD5D00520506 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABF4CE19283BF10100899867 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABF4CE1A283BF11000899867 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABF4CE1E283BF36100899867 /* Home */,
+				ABF4CE1C283BF12100899867 /* Launch */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABF4CE1B283BF11800899867 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ABF4CE1F283BF36D00899867 /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ABF4CE1C283BF12100899867 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				AB1804042836AD5D00520506 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		ABF4CE1D283BF15B00899867 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		ABF4CE1E283BF36100899867 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ABF4CE27283BF3E000899867 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ABF4CE1F283BF36D00899867 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ABF4CE26283BF3E000899867 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +188,7 @@
 			files = (
 				AB1804062836AD5D00520506 /* LaunchScreen.storyboard in Resources */,
 				AB1804032836AD5D00520506 /* Assets.xcassets in Resources */,
+				ABF4CE29283BF3E000899867 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB1803FA2836AD5B00520506 /* AppDelegate.swift in Sources */,
+				ABF4CE28283BF3E000899867 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

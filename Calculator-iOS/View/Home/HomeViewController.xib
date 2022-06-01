@@ -10,6 +10,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Calculator_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="number0" destination="c6r-dn-lSc" id="ATH-52-3D7"/>
+                <outlet property="number1" destination="WwZ-I0-tQG" id="tTe-bK-dGg"/>
+                <outlet property="number2" destination="OMf-9o-j2R" id="O2q-4S-gcc"/>
+                <outlet property="number3" destination="qpP-Ze-Mmh" id="Fxw-DV-2rT"/>
+                <outlet property="number4" destination="VXi-Ro-5wg" id="gPm-d4-5ci"/>
+                <outlet property="number5" destination="8A5-BI-TkF" id="HbG-Ji-7Ow"/>
+                <outlet property="number6" destination="K0K-VC-ebg" id="RV4-K8-pW5"/>
+                <outlet property="number7" destination="s8t-Zn-9qF" id="qoS-un-WlC"/>
+                <outlet property="number8" destination="aGe-Mx-5e8" id="mxg-93-6Dc"/>
+                <outlet property="number9" destination="lM5-HN-lxf" id="XQP-PL-aUd"/>
+                <outlet property="numberDecimal" destination="6en-3q-5vD" id="S8p-zK-2DW"/>
+                <outlet property="operatorAC" destination="cIp-tK-uby" id="Cbc-hd-4pI"/>
+                <outlet property="operatorAddition" destination="nj1-3V-epe" id="mnQ-Go-Eic"/>
+                <outlet property="operatorDivision" destination="TbY-2y-W8b" id="QYS-QU-K7Q"/>
+                <outlet property="operatorMultiplication" destination="hSg-zd-olP" id="a2M-FU-k9f"/>
+                <outlet property="operatorPercent" destination="S8l-E2-NTB" id="uIj-Vq-FBH"/>
+                <outlet property="operatorPlusMinus" destination="HF3-u1-Yqz" id="n0b-r0-PEw"/>
+                <outlet property="operatorResult" destination="DDR-o8-zEV" id="HAh-CW-uzN"/>
+                <outlet property="operatorSubstration" destination="orv-eD-gGY" id="QGN-pO-q0N"/>
+                <outlet property="result" destination="Y20-AU-naw" id="BIc-yF-HtB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +54,9 @@
                                     <state key="normal" title="AC">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorAC:" destination="-1" eventType="touchUpInside" id="KCz-xV-0kJ"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HF3-u1-Yqz">
                                     <rect key="frame" x="98.5" y="0.0" width="78.5" height="78.5"/>
@@ -45,6 +68,9 @@
                                     <state key="normal" title="+-">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorPlusMinus:" destination="-1" eventType="touchUpInside" id="6w0-OI-yuY"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8l-E2-NTB">
                                     <rect key="frame" x="197" y="0.0" width="78.5" height="78.5"/>
@@ -56,6 +82,9 @@
                                     <state key="normal" title="%">
                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorPercent:" destination="-1" eventType="touchUpInside" id="i2h-Ds-Z7j"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbY-2y-W8b">
                                     <rect key="frame" x="295.5" y="0.0" width="78.5" height="78.5"/>
@@ -67,6 +96,9 @@
                                     <state key="normal" title="/">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorDivision:" destination="-1" eventType="touchUpInside" id="acH-F7-PVZ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -78,7 +110,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OW6-16-2em">
                             <rect key="frame" x="0.0" y="99.5" width="374" height="78.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8t-Zn-9qF">
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8t-Zn-9qF">
                                     <rect key="frame" x="0.0" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -88,8 +120,11 @@
                                     <state key="normal" title="7">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="OpI-oY-K4P"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGe-Mx-5e8">
+                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGe-Mx-5e8">
                                     <rect key="frame" x="98.5" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -99,8 +134,11 @@
                                     <state key="normal" title="8">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="MBR-wX-iu5"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM5-HN-lxf">
+                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM5-HN-lxf">
                                     <rect key="frame" x="197" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -110,6 +148,9 @@
                                     <state key="normal" title="9">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="J5d-b4-MH2"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSg-zd-olP">
                                     <rect key="frame" x="295.5" y="0.0" width="78.5" height="78.5"/>
@@ -121,6 +162,9 @@
                                     <state key="normal" title="x">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorMultiplication:" destination="-1" eventType="touchUpInside" id="GdK-Z6-9sF"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -132,7 +176,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n3R-yj-cXF">
                             <rect key="frame" x="0.0" y="199" width="374" height="78.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXi-Ro-5wg">
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXi-Ro-5wg">
                                     <rect key="frame" x="0.0" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -142,8 +186,11 @@
                                     <state key="normal" title="4">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="8qJ-JT-WFq"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8A5-BI-TkF">
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8A5-BI-TkF">
                                     <rect key="frame" x="98.5" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -153,8 +200,11 @@
                                     <state key="normal" title="5">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="drz-fQ-y2P"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-VC-ebg">
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-VC-ebg">
                                     <rect key="frame" x="197" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -164,6 +214,9 @@
                                     <state key="normal" title="6">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="72l-Qi-D9d"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orv-eD-gGY">
                                     <rect key="frame" x="295.5" y="0.0" width="78.5" height="78.5"/>
@@ -175,6 +228,9 @@
                                     <state key="normal" title="-">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorSubstration:" destination="-1" eventType="touchUpInside" id="V5W-nP-ynT"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -186,7 +242,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gwU-LQ-Ly4">
                             <rect key="frame" x="0.0" y="298.5" width="374" height="78.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwZ-I0-tQG">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwZ-I0-tQG">
                                     <rect key="frame" x="0.0" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -196,8 +252,11 @@
                                     <state key="normal" title="1">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="87a-a7-RRS"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMf-9o-j2R">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMf-9o-j2R">
                                     <rect key="frame" x="98.5" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -207,8 +266,11 @@
                                     <state key="normal" title="2">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="waO-cw-wik"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpP-Ze-Mmh">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpP-Ze-Mmh">
                                     <rect key="frame" x="197" y="0.0" width="78.5" height="78.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <constraints>
@@ -218,6 +280,9 @@
                                     <state key="normal" title="3">
                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="rPs-w9-aKM"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nj1-3V-epe">
                                     <rect key="frame" x="295.5" y="0.0" width="78.5" height="78.5"/>
@@ -229,6 +294,9 @@
                                     <state key="normal" title="+">
                                         <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorAddition:" destination="-1" eventType="touchUpInside" id="OyS-YY-hJS"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -250,6 +318,9 @@
                                             <state key="normal" title="0">
                                                 <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </state>
+                                            <connections>
+                                                <action selector="numbersAction:" destination="-1" eventType="touchUpInside" id="MTN-zr-9te"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -266,6 +337,9 @@
                                             <state key="normal" title=",">
                                                 <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </state>
+                                            <connections>
+                                                <action selector="numberDecimalAction:" destination="-1" eventType="touchUpInside" id="8Yu-T7-9Nd"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDR-o8-zEV">
                                             <rect key="frame" x="98.5" y="0.0" width="78.5" height="78.5"/>
@@ -277,6 +351,9 @@
                                             <state key="normal" title="=">
                                                 <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </state>
+                                            <connections>
+                                                <action selector="operatorResult:" destination="-1" eventType="touchUpInside" id="PqH-4i-PQV"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>

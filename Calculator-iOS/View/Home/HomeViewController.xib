@@ -29,7 +29,7 @@
                 <outlet property="operatorPlusMinus" destination="HF3-u1-Yqz" id="n0b-r0-PEw"/>
                 <outlet property="operatorResult" destination="DDR-o8-zEV" id="HAh-CW-uzN"/>
                 <outlet property="operatorSubstration" destination="orv-eD-gGY" id="QGN-pO-q0N"/>
-                <outlet property="result" destination="Y20-AU-naw" id="BIc-yF-HtB"/>
+                <outlet property="resultLabel" destination="Y20-AU-naw" id="UuV-We-CyE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

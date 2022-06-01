@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     //MARK: - Outlets
     
     //Result
-    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
     
 
     //Numbers
@@ -133,5 +133,49 @@ class HomeViewController: UIViewController {
     @IBAction func numbersAction(_ sender: UIButton) {
     }
     
+    
+    //MARK: - Funciones
+    
+    //Limpiar los valores
+    private func clear(){
+        operation = .none
+        operatorAC.setTitle("AC", for: .normal)
+        if temp != 0 {
+            resultLabel.text = "0"
+            temp = 0
+        }else {
+            total = 0
+            result()
+        }
+    }
+    
+    //Calcular y mostrar resultado
+    private func result(){
+        switch operation {
+            case .none:
+                //Salimos del Switch
+                break
+            case .addition:
+                total = total + temp
+                break
+            case .substration:
+                total = total - temp
+                break
+            case .multiplication:
+                total = total * temp
+                break
+            case .division:
+                total = total / temp
+                break
+            case .percent:
+                temp = temp / 100
+                total = temp
+                break
+        }
+        
+        if total <= kMaxValue || total >= kMinValue {
+            resultLabel.text = printFormatter.string(from: NSNumber(value: total))
+        }
+    }
     
 }

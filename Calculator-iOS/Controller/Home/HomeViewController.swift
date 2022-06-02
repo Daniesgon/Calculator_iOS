@@ -104,33 +104,106 @@ class HomeViewController: UIViewController {
     
     //MARK: - Button Action
     @IBAction func operatorAC(_ sender: UIButton) {
+        
+        clear()
+        
     }
     
     @IBAction func operatorPlusMinus(_ sender: UIButton) {
+        
+        temp = temp * (-1)
+        resultLabel.text = printFormatter.string(from: NSNumber(value: temp))
+        
     }
     
     @IBAction func operatorPercent(_ sender: UIButton) {
+        
+        if operation != .percent {
+            result()
+        }
+        
+        operation = .percent
+        operating = true
+        result()
+        
     }
     
     @IBAction func operatorDivision(_ sender: UIButton) {
+        
+        result()
+        operation = .division
+        operating = true
+        
     }
     
     @IBAction func operatorMultiplication(_ sender: UIButton) {
+        
+        result()
+        operation = .multiplication
+        operating = true
+        
     }
     
     @IBAction func operatorSubstration(_ sender: UIButton) {
+        
+        result()
+        operation = .substration
+        operating = true
+        
     }
     
     @IBAction func operatorAddition(_ sender: UIButton) {
+        
+        result()
+        operation = .addition
+        operating = true
+        
     }
     
     @IBAction func operatorResult(_ sender: UIButton) {
+        
+        result()
+        
     }
     
     @IBAction func numberDecimalAction(_ sender: UIButton) {
+        
+        let currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
+        
+        if !operating && currentTemp.count >= kMaxLength {
+            return
+        }
+        
+        resultLabel.text = resultLabel.text! + kDecimalSeparator!
+        decimal = true
+        
     }
     
     @IBAction func numbersAction(_ sender: UIButton) {
+        
+        operatorAC.setTitle("C", for: .normal)
+        var currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
+        if !operating && currentTemp.count >= kMaxLength {
+            return
+        }
+        
+        if operating {
+            total = total == 0 ? temp : total
+            resultLabel.text = ""
+            currentTemp = ""
+            operating = false
+        }
+        
+        if decimal {
+                currentTemp = currentTemp + kDecimalSeparator!
+            decimal = false
+        }
+        
+        let number = sender.tag
+        temp = Double(currentTemp + String(number))!
+        
+        resultLabel.text = printFormatter.string(from: NSNumber(value: temp))
+        
     }
     
     
